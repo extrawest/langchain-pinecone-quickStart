@@ -23,7 +23,9 @@ text_splitter = RecursiveCharacterTextSplitter(
     length_function=tiktoken_len,
     separators=["\n\n", "\n", " ", ""]
 )
-chunks = text_splitter.split_text(data[6]['text'])[:3]
-print(chunks)
-chunks_len = tiktoken_len(chunks[0]), tiktoken_len(chunks[1]), tiktoken_len(chunks[2])
-print(chunks_len)
+
+if __name__ == '__main__':
+    chunks = text_splitter.split_text(data[6]['text'])[:3]
+    print(chunks)
+    chunks_len = tiktoken_len(chunks[0]), tiktoken_len(chunks[1]), tiktoken_len(chunks[2])
+    print(chunks_len)
