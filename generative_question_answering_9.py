@@ -52,6 +52,3 @@ response = chain.invoke({"query": query})
 answer, docs = response['result'], response['source_documents']
 print(answer)
 print(docs)
-
-# Print the response
-# print(response)
